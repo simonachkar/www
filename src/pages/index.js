@@ -13,11 +13,11 @@ const IndexPage = () => {
           <h1>Hi, I'm Simon</h1>
           <p className="large">
             I’m a Software Developer based in Halifax, NS currently working with{" "}
-            <a hfref="https://www.redspace.com/">REDspace</a>.
+            <a href="https://www.redspace.com/" target="_blank" >REDspace</a>.
           </p>
           <p className="small">
             I build and design websites on the weekends! Got a weekend project
-            for me? <a hfref="mailto:simon@simonachkar.com">Get in touch</a>.
+            for me? <a href="mailto:simon@simonachkar.com">Get in touch</a>.
           </p>
         </div>
       </div>
