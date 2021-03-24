@@ -2,7 +2,7 @@
 
 $font-stack: Helvetica, sans-serif;
 $primary-color: #2fd381;
-$small: 900px;
+$small: 910px;
 $medium: 1080px;
 $large: 1279px;
 
@@ -11,7 +11,6 @@ $large: 1279px;
 }
 
 body {
-    font: 100% $font-stack;
     margin: 0;
     height: 100vh;
     border: 15px solid $primary-color;
@@ -25,40 +24,38 @@ body {
     display: grid;
     padding: 10px;
     max-width: $medium;
-    margin-left: 150px;
-    margin-top: 50px;
 
-    @media screen and (max-width: $small) {
-        margin-left: 50px;
-        margin-top: 50px;
-    }
+    margin-left: 10vw;
+    margin-top: 5vh;
 
     .logo {
-        max-width: 175px;
+        max-width: 13.5vw;
         transform: rotate(5deg);
         grid-column: 1;
         grid-row: 1;
         margin-right: 50px;
         margin-top: 50px;
 
+        @media screen and (min-width: $medium) and (max-width: $large) {
+            max-width: 15vw;
+        }
+
         @media screen and (max-width: $small) {
-            max-width: 100px;
+            max-width: 20vw;
         }
     }
 
     .col {
         grid-column: 2/4;
         grid-row: 1;
-        margin-right: 200px;
+        margin-right: 20vw;
 
         @media screen and (min-width: $medium) and (max-width: $large) {
-            margin-right: 150px;
         }
 
         @media screen and (max-width: $small) {
             grid-column: 1;
             grid-row: 2;
-            margin-right: 50px;
         }
     }
 
