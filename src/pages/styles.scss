@@ -2,6 +2,9 @@
 
 $font-stack: Helvetica, sans-serif;
 $primary-color: #2fd381;
+$small: 900px;
+$medium: 1080px;
+$large: 1279px;
 
 * {
     box-sizing: border-box;
@@ -11,23 +14,75 @@ body {
     font: 100% $font-stack;
     margin: 0;
     height: 100vh;
-    border: 10px solid $primary-color;
+    border: 15px solid $primary-color;
+
+    @media screen and (max-width: $small) {
+        border: 10px solid $primary-color;
+    }
 }
 
 .hero {
     display: grid;
-    grid-template-columns: auto auto;
     padding: 10px;
-    margin-left: 20vw;
-    margin-top: 10vh;
+    max-width: $medium;
+    margin-left: 150px;
+    margin-top: 50px;
+
+    @media screen and (max-width: $small) {
+        margin-left: 50px;
+        margin-top: 50px;
+    }
+
+    .logo {
+        max-width: 175px;
+        transform: rotate(5deg);
+        grid-column: 1;
+        grid-row: 1;
+        margin-right: 50px;
+        margin-top: 50px;
+
+        @media screen and (max-width: $small) {
+            max-width: 100px;
+        }
+    }
+
+    .col {
+        grid-column: 2/4;
+        grid-row: 1;
+        margin-right: 200px;
+
+        @media screen and (min-width: $medium) and (max-width: $large) {
+            margin-right: 150px;
+        }
+
+        @media screen and (max-width: $small) {
+            grid-column: 1;
+            grid-row: 2;
+            margin-right: 50px;
+        }
+    }
+
     h1 {
-        font-size: 80px;
+        font-size: 5vw;
         font-family: "Fira Sans", sans-serif;
+        margin-bottom: 0;
+
+        @media screen and (max-width: $small) {
+            font-size: 10vw;
+        }
     }
+
     p {
-        font-size: 32px;
+        margin-top: 20px;
+        font-size: 28px;
         font-family: "Montserrat", sans-serif;
+
+        @media screen and (max-width: $small) {
+            margin-left: 0;
+            font-size: 5vw;
+        }
     }
+
     a {
         color: $primary-color;
         &:hover {
@@ -37,24 +92,17 @@ body {
         }
     }
     .small {
-        margin-top: 5vh;
+        margin-top: 3vh;
         margin-left: 10vw;
-        font-size: 26px;
+        font-size: 24px;
+
+        @media screen and (max-width: $small) {
+            margin-left: 0;
+            margin-top: 40px;
+            font-size: 4vw;
+        }
     }
     .large {
         margin-right: 5vw;
-    }
-    .logo {
-        max-width: 215px;
-        transform: rotate(5deg);
-        grid-column: 1;
-        grid-row: 1;
-        margin-right: 2.5vw;
-        margin-top: 5vh;
-    }
-    .col {
-        grid-column: 2/4;
-        grid-row: 1;
-        margin-right: 30vw;
     }
 }
