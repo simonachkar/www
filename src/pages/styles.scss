@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@900&family=Montserrat:ital,wght@0,100;0,300;1,300&display=swap");
+
+$font-stack: Helvetica, sans-serif;
+$primary-color: #2fd381;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font: 100% $font-stack;
+    margin: 0;
+    height: 100vh;
+    border: 10px solid $primary-color;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+    margin-left: 20vw;
+    margin-top: 10vh;
+    h1 {
+        font-size: 80px;
+        font-family: "Fira Sans", sans-serif;
+    }
+    p {
+        font-size: 32px;
+        font-family: "Montserrat", sans-serif;
+    }
+    a {
+        color: $primary-color;
+        &:hover {
+            cursor: pointer;
+            color: white;
+            background-color: $primary-color;
+        }
+    }
+    .small {
+        margin-top: 5vh;
+        margin-left: 10vw;
+        font-size: 26px;
+    }
+    .large {
+        margin-right: 5vw;
+    }
+    .logo {
+        max-width: 215px;
+        transform: rotate(5deg);
+        grid-column: 1;
+        grid-row: 1;
+        margin-right: 2.5vw;
+        margin-top: 5vh;
+    }
+    .col {
+        grid-column: 2/4;
+        grid-row: 1;
+        margin-right: 30vw;
+    }
+}
